@@ -1,0 +1,97 @@
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form Box */
+.form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Headings */
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #4a4a9e;
+}
+.subtitle {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color: #444;
+}
+
+/* Input Rows */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.row input {
+  flex: 1;
+}
+
+/* Inputs */
+input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* Day box */
+.day-box {
+  background: #f9f9ff;
+  border-left: 5px solid #4a90e2;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.day-box h4 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.add {
+  background: #4a90e2;
+  color: white;
+}
+.add:hover {
+  background: #357ab8;
+}
+.save {
+  background: #28a745;
+  color: white;
+}
+.save:hover {
+  background: #1e7e34;
+}
