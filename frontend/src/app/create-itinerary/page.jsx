@@ -9,10 +9,10 @@ function CreateItinerary() {
   const [numberOfDays, setNumberOfDays] = useState(1);
 
   useEffect(() => {
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
+    // const userData = localStorage.getItem("user");
+    // if (userData) {
+    //   setUser(JSON.parse(userData));
+    // }
   }, []);
 
   const calculateDays = (start, end) => {
@@ -42,22 +42,29 @@ function CreateItinerary() {
       ],
     },
     onSubmit: async (values) => {
-      // if (!user?._id) {
-      //   toast.error("Please login first!");
-      //   return;
-      // }
+      console.log("Form submitted", values);
+    //  if (!user?._id) {
+    //      toast.error("Please login first!");
+    //     return;
+    //   }
+      const data = {
+        ...values,
+        // userId: user._id,
+      };
 
       try {
         const formattedValues = {
           ...values,
-          owner: user._id,
+          // owner: user._id,
           tags: values.tags.split(",").map((tag) => tag.trim()), // Convert comma-separated tags to array
         };
 
         const res = await axios.post(
-          "http://localhost:5000/itineraries/add",
+          "http://localhost:5000/itinerary/add",
           formattedValues
-        );
+        , {headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }});
         toast.success("Itinerary Created Successfully!");
         console.log("Response:", res.data);
       } catch (err) {

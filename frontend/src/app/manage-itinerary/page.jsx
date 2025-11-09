@@ -70,8 +70,8 @@ const ManageItinerary = () => {
               </p>
               <div className="flex justify-between mt-4">
                 <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-                  <Link href={`/update-itinerary/${item._id}`}>
-                    Edit
+                  <Link href={`/view-itinerary/${item._id}`}>
+                    View
                   </Link>
                 </button>
                 <button

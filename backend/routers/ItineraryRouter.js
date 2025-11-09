@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Itinerary = require('../models/ItineraryModel');
+const verifyToken = require('../middleware/authMiddleware');
 
 // ➕ Create Itinerary
 router.post('/add', (req, res) => {
@@ -27,7 +28,7 @@ router.get('/getall', (req, res) => {
 });
 
 // 📖 Get Single Itinerary by ID
-router.get('/getbyid/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   Itinerary.findById(req.params.id)
     .populate('owner', 'name email')
     .populate('destinations')

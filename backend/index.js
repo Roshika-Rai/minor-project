@@ -11,6 +11,9 @@ app.use(cors({
   origin: ['http://localhost:3000']
 }))
 app.use(express.json());
+// Routers
+app.use('/itinerary',itineraryRouter);
+app.use('/user', UserRouter);
 
 // MongoDB connect
 mongoose.connect('mongodb+srv://rairoshika201:1234@cluster0.m1ixonc.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0', {

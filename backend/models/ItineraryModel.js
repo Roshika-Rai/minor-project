@@ -11,7 +11,7 @@ const DayPlanSchema = new mongoose.Schema({
 const ItinerarySchema = new mongoose.Schema({
   title: { type: String, required: true, trim: true },
   description: String,
-  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
   startDate: { type: Date, required: true },
   endDate: { type: Date, required: true },
   days: [DayPlanSchema],

@@ -14,12 +14,14 @@ const login = () => {
 
     },
     onSubmit: (values) => {
-      console.log(values);
+      console.log("form Values:", values);
       axios.post('http://localhost:5000/user/authenticate', values)
         .then((result) => {
           toast.success('Login Successful')
           console.log(result.data);
-          localStorage.setItem('token', JSON.stringify(result.data.token));
+          localStorage.setItem('token', result.data.token);
+          // localStorage.setItem('user',JSON.stringify(result.data.user));
+
         }).catch((err) => {
           toast.error('Login Failed');
           console.log(err);
