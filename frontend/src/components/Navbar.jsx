@@ -1,4 +1,5 @@
 import React from 'react'
+import { IconLogin, IconUserPlus } from "@tabler/icons-react";
 
 
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
      <header className="text-gray-600 body-font">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         stroke="currentColor"
@@ -17,20 +18,25 @@ const Navbar = () => {
         viewBox="0 0 24 24"
       >
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-      </svg>
-      <span className="ml-3 text-xl">TRAVEL ITIERARY</span>
+      </svg> */}
+      <span className="text-2xl font-bold text-blue-600">TRAVEL ITIERARY</span>
     </a>
-    <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-      <a href='/' className="mr-5 hover:text-gray-900">Home</a>
-      <a href='' className="mr-5 hover:text-gray-900">Destination</a>
-      <a className="mr-5 hover:text-gray-900">Plans</a>
-      <a className="mr-5 hover:text-gray-900">About Us</a>
-      <a className="mr-5 hover:text-gray-900">Contact Us</a>
+    <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center  justify-center text-lg font-semi medium">
+      <a href='/' className="mr-5 hover:text-blue-600">Home</a>
+      <a href='' className="mr-5 hover:text-blue-600">Destination</a>
+      <a className="mr-5 hover:text-blue-600">Plans</a>
+      <a className="mr-5 hover:text-blue-600">About Us</a>
+      <a className="mr-5 hover:text-blue-600">Contact Us</a>
     </nav>
-    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-      Sign UP
-     
-    </button>
+    {/* button */}
+   <div className="flex gap-4">
+<button className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white">
+<IconLogin size={20} /> Login
+</button>
+<button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+<IconUserPlus size={20} /> Create Account
+</button>
+</div>
   </div>
 </header>
 
