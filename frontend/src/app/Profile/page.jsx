@@ -1,80 +1,197 @@
-import Image from "next/image";
+"use client";
 
-export default function Profile() {
+export default function TravelProfile() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex items-center justify-center p-6">
-      <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-lg">
-        {/* Profile Image */}
-        <div className="flex justify-center">
-          <Image
-            src="/roshika.jpeg"   // 👈 public folder wali photo
-            alt="Roshika"
-            width={140}
-            height={140}
-            className="rounded-full border-4 border-purple-500 shadow-md"
-          />
-        </div>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#f4f4f4",
+        padding: "30px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          width: "700px",
+          background: "#fff",
+          padding: "40px",
+          borderRadius: "10px",
+          boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+        }}
+      >
+        {/* HEADER */}
+        <h1
+          style={{
+            color: "#5c8d34",
+            fontSize: "26px",
+            fontWeight: "700",
+            marginBottom: "25px",
+          }}
+        >
+          TRAVEL PROFILE
+        </h1>
 
-        {/* Name & Email */}
-        <h2 className="text-3xl font-bold mt-4 text-center text-gray-800">
-          Roshika Rai
-        </h2>
-        <p className="text-center text-gray-500">roshika@example.com</p>
+        {/* TRAVELER PROFILE SECTION */}
+        <h3
+          style={{
+            background: "#e6f5e9",
+            padding: "10px",
+            border: "1px solid #c9e6cf",
+            borderRadius: "5px",
+            color: "#5c8d34",
+            marginBottom: "10px",
+            fontSize: "16px",
+            fontWeight: "600",
+          }}
+        >
+          TRAVELER’S PROFILE
+        </h3>
 
-        {/* About Section */}
-        <div className="mt-6 text-center">
-          <h3 className="text-xl font-semibold text-purple-600">About Me</h3>
-          <p className="text-gray-600 mt-2 text-sm leading-relaxed">
-            I am a passionate Web Developer currently learning React.js and
-            Next.js 🚀. I love creating modern, user-friendly websites and
-            beautiful UI designs.
-          </p>
-        </div>
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            marginBottom: "20px",
+          }}
+        >
+          <tbody>
+            <tr>
+              <td style={tdLeft}>Full Name</td>
+              <td style={tdRight}>Roshika Rai</td>
+            </tr>
+            <tr>
+              <td style={tdLeft}>Date of Birth</td>
+              <td style={tdRight}>Jan 15, 2002</td>
+            </tr>
+            <tr>
+              <td style={tdLeft}>Sex</td>
+              <td style={tdRight}>Female</td>
+            </tr>
+            <tr>
+              <td style={tdLeft}>Nationality</td>
+              <td style={tdRight}>Indian</td>
+            </tr>
+            <tr>
+              <td style={tdLeft}>Occupation</td>
+              <td style={tdRight}>Student / Web Developer Intern</td>
+            </tr>
+            <tr>
+              <td style={tdLeft}>Passport No.</td>
+              <td style={tdRight}>AB-1234567</td>
+            </tr>
+          </tbody>
+        </table>
 
-        {/* Skills Section */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-purple-600 text-center">
-            Skills
-          </h3>
-          <div className="flex justify-center gap-3 flex-wrap mt-3">
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm shadow">
-              HTML
-            </span>
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm shadow">
-              CSS
-            </span>
-            <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm shadow">
-              JavaScript
-            </span>
-            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm shadow">
-              React.js
-            </span>
-            <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm shadow">
-              Next.js
-            </span>
-          </div>
-        </div>
+        {/* CONTACT INFORMATION */}
+        <h3
+          style={{
+            background: "#e6f5e9",
+            padding: "10px",
+            border: "1px solid #c9e6cf",
+            borderRadius: "5px",
+            color: "#5c8d34",
+            marginBottom: "10px",
+            fontSize: "16px",
+            fontWeight: "600",
+          }}
+        >
+          CONTACT INFORMATION
+        </h3>
 
-        {/* Contact Info */}
-        <div className="mt-6 text-center">
-          <h3 className="text-xl font-semibold text-purple-600">Contact</h3>
-          <p className="text-gray-600 mt-2 text-sm">
-            📍 Lucknow, India <br />
-            📞 +91 9876543210 <br />
-            ✉️ roshika@example.com
-          </p>
-        </div>
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            marginBottom: "20px",
+          }}
+        >
+          <thead>
+            <tr>
+              <th style={thStyle}>City</th>
+              <th style={thStyle}>State</th>
+              <th style={thStyle}>Zip Code</th>
+              <th style={thStyle}>Phone</th>
+              <th style={thStyle}>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={tdBox}>Delhi</td>
+              <td style={tdBox}>DL</td>
+              <td style={tdBox}>110001</td>
+              <td style={tdBox}>+91 9876543210</td>
+              <td style={tdBox}>roshika@example.com</td>
+            </tr>
+          </tbody>
+        </table>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 mt-6">
-          <button className="px-5 py-2 bg-purple-500 text-white rounded-xl shadow hover:bg-purple-600 transition">
-            Message
-          </button>
-          <button className="px-5 py-2 bg-gray-200 text-gray-700 rounded-xl shadow hover:bg-gray-300 transition">
-            Follow
-          </button>
-        </div>
+        {/* TRAVEL HISTORY */}
+        <h3
+          style={{
+            background: "#e6f5e9",
+            padding: "10px",
+            border: "1px solid #c9e6cf",
+            borderRadius: "5px",
+            color: "#5c8d34",
+            marginBottom: "10px",
+            fontSize: "16px",
+            fontWeight: "600",
+          }}
+        >
+          TRAVEL HISTORY
+        </h3>
+
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr>
+              <th style={thStyle}>Destination</th>
+              <th style={thStyle}>Date Visited</th>
+              <th style={thStyle}>Duration</th>
+              <th style={thStyle}>Purpose</th>
+              <th style={thStyle}>Travel Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={tdBox}>Goa</td>
+              <td style={tdBox}>25 Nov 2024</td>
+              <td style={tdBox}>3 Days</td>
+              <td style={tdBox}>Vacation</td>
+              <td style={tdBox}>Solo</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
 }
+
+const tdLeft = {
+  padding: "10px",
+  border: "1px solid #dcdcdc",
+  background: "#f7f7f7",
+  width: "40%",
+  fontWeight: "600",
+};
+
+const tdRight = {
+  padding: "10px",
+  border: "1px solid #dcdcdc",
+  width: "60%",
+  background: "#fff",
+};
+
+const thStyle = {
+  padding: "10px",
+  border: "1px solid #dcdcdc",
+  background: "#f7f7f7",
+  fontSize: "14px",
+  fontWeight: "600",
+};
+
+const tdBox = {
+  padding: "10px",
+  border: "1px solid #dcdcdc",
+  textAlign: "center",
+};
